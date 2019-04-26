@@ -1,4 +1,5 @@
 import React from 'react';
+import UserList from "./component/UserList";
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
       </header>
+        <article>
+            <UserList/>
+        </article>
     </div>
   );
 }
