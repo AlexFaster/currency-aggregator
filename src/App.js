@@ -1,19 +1,14 @@
 import React from 'react';
-import UserList from "./component/UserList";
+import HomeContainer from "./app/home/HomeContainer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-        <article>
-            <UserList/>
-        </article>
-    </div>
-  );
+    return (
+        <div className="App">
+            <article>
+                <HomeContainer/>
+            </article>
+        </div>
+    );
 }
 
 export default App;
