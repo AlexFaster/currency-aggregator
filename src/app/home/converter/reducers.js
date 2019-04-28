@@ -3,12 +3,12 @@ import {SWITCH_RESULT_CURRENCY} from "./types";
 const INITIAL_STATE = {
     currencies: [
         {
-            uuid: 'asdsadad',
+            uuid: 1,
             name: 'USD',
             amount: '1000'
         },
         {
-            uuid: 'asdsasddad',
+            uuid: 2,
             name: 'EUR',
             amount: '2000'
         },

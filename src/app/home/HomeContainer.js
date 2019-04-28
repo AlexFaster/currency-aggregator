@@ -11,8 +11,10 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => (
-    {switchCurrency: (event) => dispatch(switchCurrency(event))
-});
+    {
+        switchCurrency: (event) => dispatch(switchCurrency(event))
+    }
+);
 
 const HomeContainer = connect(
     mapStateToProps,
