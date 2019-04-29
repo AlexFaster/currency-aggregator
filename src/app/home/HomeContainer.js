@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => (
     {
         switchCurrency: (event) => dispatch(switchCurrency(event)),
-        addCurrency: () => dispatch(addCurrency())
+        addCurrency: (currency) => dispatch(addCurrency(currency))
     }
 );
 

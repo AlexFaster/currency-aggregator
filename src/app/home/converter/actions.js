@@ -11,13 +11,10 @@ export const calculateMoney = (event) => {
 
 };
 
-export const addCurrency = () => {
+export const addCurrency = (currency) => {
     console.log('addCurrency invoked');
     return {
         type: ADD_CURRENCY,
-        currency: {
-            name: 'name',
-            amount: 100
-        }
+        currency
     }
 };
