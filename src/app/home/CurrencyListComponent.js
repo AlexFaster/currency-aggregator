@@ -10,8 +10,8 @@ const CurrencyListComponent = (
     <div>
         {
             currencies.map(
-                currency => (
-                    <CurrencyItemComponent key={currency.uuid} currency={currency}/>
+                (currency, index) => (
+                    <CurrencyItemComponent key={index} currency={currency}/>
                 )
             )
         }

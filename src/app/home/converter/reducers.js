@@ -1,19 +1,18 @@
-import {SWITCH_RESULT_CURRENCY} from "./types";
+import {ADD_CURRENCY, SWITCH_RESULT_CURRENCY} from "./types";
 
 const INITIAL_STATE = {
     currencies: [
         {
-            uuid: 1,
             name: 'USD',
             amount: '1000'
         },
         {
-            uuid: 2,
             name: 'EUR',
             amount: '2000'
         },
     ],
-    resultCurrency: 'USD'
+    resultCurrency: 'USD',
+    result: 0
 };
 
 const currencyReducer = (state = INITIAL_STATE, action) => {
@@ -22,6 +21,12 @@ const currencyReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 resultCurrency: action.value
+            }
+        }
+        case ADD_CURRENCY: {
+            return {
+                ...state,
+                currencies: [...state.currencies, action.currency]
             }
         }
     }

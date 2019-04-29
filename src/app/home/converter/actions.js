@@ -1,10 +1,23 @@
-import {SWITCH_RESULT_CURRENCY} from "./types";
+import {ADD_CURRENCY, SWITCH_RESULT_CURRENCY} from "./types";
 
-const switchCurrency = (event) => {
+export const switchCurrency = (event) => {
     return {
         type: SWITCH_RESULT_CURRENCY,
         value: event.target.value
     }
 };
 
-export default switchCurrency;
+export const calculateMoney = (event) => {
+
+};
+
+export const addCurrency = () => {
+    console.log('addCurrency invoked');
+    return {
+        type: ADD_CURRENCY,
+        currency: {
+            name: 'name',
+            amount: 100
+        }
+    }
+};

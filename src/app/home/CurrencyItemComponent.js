@@ -6,7 +6,7 @@ const CurrencyItemComponent = (
     }
 ) => (
     <div>
-        {currency.name} <input type='integer' value={currency.amount} />
+        {currency.name} <input type='integer' defaultValue={currency.amount} />
     </div>
 );
 
