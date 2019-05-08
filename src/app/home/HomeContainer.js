@@ -1,6 +1,6 @@
 import HomeComponent from "./HomeComponent";
 import {connect} from "react-redux";
-import {addCurrency, switchCurrency} from "./converter/actions";
+import {addCurrency, switchCurrency, calculateMoney, changeInput} from "./converter/actions";
 
 const mapStateToProps = (state) => {
     const {currencies, resultCurrency, result} = state.currenciesState;
@@ -14,7 +14,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => (
     {
         switchCurrency: (event) => dispatch(switchCurrency(event)),
-        addCurrency: (currency) => dispatch(addCurrency(currency))
+        addCurrency: (currency) => dispatch(addCurrency(currency)),
+        calculateMoney: (currencies) => dispatch(calculateMoney(currencies)),
+        changeInput: (event) => dispatch(changeInput(event))
     }
 );
 

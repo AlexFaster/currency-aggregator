@@ -11,15 +11,17 @@ const HomeComponent = (
         switchCurrency,
         resultCurrency,
         result,
-        addCurrency
+        addCurrency,
+        calculateMoney,
+        changeInput
     }
 ) => (
     <div>
-        <CurrencyListComponent currencies={currencies}/>
-        <AddCurrencyComponent addCurrency={addCurrency}/>
-        <ControlComponent/>
+        <CurrencyListComponent currencies={currencies} changeInput={changeInput}/>
+        <ControlComponent calculateMoney={calculateMoney}/>
         <ResultCurrencySelectComponent switchCurrency={switchCurrency} selectValue={resultCurrency}/>
         <ResultComponent result={result} resultCurrency={resultCurrency}/>
+        <AddCurrencyComponent addCurrency={addCurrency}/>
     </div>
 );
 

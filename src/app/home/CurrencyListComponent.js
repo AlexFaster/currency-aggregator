@@ -4,14 +4,15 @@ import CurrencyItemComponent from "./CurrencyItemComponent";
 
 const CurrencyListComponent = (
     {
-        currencies
+        currencies,
+        changeInput
     }
 ) => (
     <div>
         {
             currencies.map(
                 (currency, index) => (
-                    <CurrencyItemComponent key={index} currency={currency}/>
+                    <CurrencyItemComponent key={index} index={index} currency={currency} changeInput={changeInput}/>
                 )
             )
         }

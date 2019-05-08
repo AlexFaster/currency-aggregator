@@ -1,4 +1,4 @@
-import {ADD_CURRENCY, SWITCH_RESULT_CURRENCY} from "./types";
+import {ADD_CURRENCY, CALCULATION_SUCCESS, CHANGE_AMOUNT, RESET_CALCULATION, SWITCH_RESULT_CURRENCY} from "./types";
 
 const INITIAL_STATE = {
     currencies: [
@@ -29,8 +29,33 @@ const currencyReducer = (state = INITIAL_STATE, action) => {
                 currencies: [...state.currencies, action.currency]
             }
         }
+        case CALCULATION_SUCCESS: {
+            // debugger;
+            return {
+                ...state,
+                result: state.result + action.amount
+            }
+        }
+        case RESET_CALCULATION: {
+            return {
+                ...state,
+                result: 0
+            }
+        }
+        case CHANGE_AMOUNT: {
+            return {
+                ...state,
+                currencies: state.currencies.map((currency, index) => {
+                    if(index === action.index) {
+                        currency.amount = action.value
+                    }
+                    return currency;
+                })
+            }
+        }
+        default:
+            return state
     }
-    return state;
 };
 
 export default currencyReducer;

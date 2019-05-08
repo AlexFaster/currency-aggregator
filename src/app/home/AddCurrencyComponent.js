@@ -5,7 +5,7 @@ const AddCurrencyComponent = (
         addCurrency,
     }
 ) => {
-    const [resultState, setNewState] = useState({});
+    const [resultState, setNewState] = useState({name: 'USD'});
 
     const setName = (e) => {
         setNewState(
@@ -27,7 +27,7 @@ const AddCurrencyComponent = (
 
     return (
         <div>
-            <select name="currency_select_add" id="currency_select_add" onChange={setName}>
+            <select name="currency_select_add" id="currency_select_add" onChange={setName} value={resultState.name}>
                 <option>USD</option>
                 <option>EUR</option>
                 <option>UAH</option>

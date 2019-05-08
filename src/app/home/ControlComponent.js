@@ -1,9 +1,13 @@
 import React from "react";
 
-const ControlComponent = ({}) => {
+const ControlComponent = (
+    {
+        calculateMoney
+    }
+) => {
     return (
         <div>
-            <button>Calculate</button>
+            <button onClick={calculateMoney}>Calculate</button>
         </div>
     );
 };

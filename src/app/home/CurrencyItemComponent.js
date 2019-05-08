@@ -2,11 +2,13 @@ import React from "react";
 
 const CurrencyItemComponent = (
     {
-        currency
+        currency,
+        index,
+        changeInput
     }
 ) => (
     <div>
-        {currency.name} <input type='integer' defaultValue={currency.amount} />
+        {currency.name} <input type='integer' name={index} value={currency.amount} onChange={changeInput}/>
     </div>
 );
 
